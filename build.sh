@@ -29,7 +29,9 @@ wasm-tools strip \
   -o "$OUT_NAME.wasm"
 
 # 最適化
-wasm-opt -Oz --enable-bulk-memory-opt \
+wasm-opt -Oz \
+  --enable-bulk-memory-opt \
+  # --enable-nontrapping-float-to-int \
   "target/$TARGET/release/$BIN_NAME.wasm" \
   -o "$OUT_NAME.wasm"
 

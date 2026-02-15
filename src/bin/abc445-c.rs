@@ -2,11 +2,11 @@
 
 use std::io::{self, Write};
 
-use atcoder_wasm::input;
+use cp_library_rs::get;
 
 fn main() {
-    let N = input!(usize);
-    let A = input!(usize1;;);
+    let N = get!(usize);
+    let A = get!(usize1;;);
 
     let mut ans = vec![0; N];
 

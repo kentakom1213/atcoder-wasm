@@ -2,12 +2,12 @@
 
 use std::io::Write;
 
-use atcoder_wasm::input;
+use cp_library_rs::get;
 
 fn main() {
-    let _N = input!(usize);
-    let T = input!(String);
-    let A = input!(String);
+    let _N = get!(usize);
+    let T = get!(String);
+    let A = get!(String);
 
     let mut out = std::io::stdout();
 

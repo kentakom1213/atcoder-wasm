@@ -1,9 +1,9 @@
 #![allow(non_snake_case)]
 
-use atcoder_wasm::input;
+use cp_library_rs::get;
 
 fn main() {
-    let S = input!(chars);
+    let S = get!(chars);
     let n = S.len();
 
     for i in 1..n {

@@ -2,11 +2,11 @@
 
 use std::io::Write;
 
-use atcoder_wasm::input;
+use cp_library_rs::get;
 
 fn main() {
-    let A = input!(usize;;);
-    let B = input!(usize;;);
+    let A = get!(usize;;);
+    let B = get!(usize;;);
 
     let ans = A.iter().sum::<usize>() - B.iter().sum::<usize>() + 1;
 

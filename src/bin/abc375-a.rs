@@ -1,10 +1,10 @@
 #![allow(non_snake_case)]
 
-use atcoder_wasm::input;
+use cp_library_rs::get;
 
 fn main() {
-    let N = input!(usize);
-    let S = input!(chars);
+    let N = get!(usize);
+    let S = get!(chars);
 
     if N <= 2 {
         println!("0");

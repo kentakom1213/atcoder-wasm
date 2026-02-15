@@ -2,10 +2,10 @@
 
 use std::io::{Write, stdout};
 
-use atcoder_wasm::input;
+use cp_library_rs::get;
 
 fn main() {
-    let (a, b, c, d) = input!(i32, i32, i32, i32);
+    let (a, b, c, d) = get!(i32, i32, i32, i32);
 
     let mut out = stdout();
 

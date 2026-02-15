@@ -11,7 +11,7 @@
 #![allow(dead_code)]
 #![allow(unused_macros)]
 
-use atcoder_wasm::input;
+use cp_library_rs::get;
 use cp_library_rs::number_theory::{
     comb::Comb,
     modint::{Fp, M998},
@@ -19,7 +19,7 @@ use cp_library_rs::number_theory::{
 use num::Zero;
 
 fn main() {
-    let (N, M, K) = input!(usize, usize, usize);
+    let (N, M, K) = get!(usize, usize, usize);
 
     let comb = Comb::<M998>::new(1_000_000);
 

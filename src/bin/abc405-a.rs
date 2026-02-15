@@ -2,10 +2,10 @@
 
 use std::io::{Write, stdout};
 
-use atcoder_wasm::input;
+use cp_library_rs::get;
 
 fn main() {
-    let (R, X) = input!(usize, usize);
+    let (R, X) = get!(usize, usize);
 
     let isok = if X == 1 {
         1600 <= R && R <= 2999

@@ -1,11 +1,11 @@
 #![allow(non_snake_case)]
 
-use atcoder_wasm::input;
+use cp_library_rs::get;
 use std::io::{Write, stdout};
 
 fn main() {
-    let N = input!(usize);
-    let S = input!(String);
+    let N = get!(usize);
+    let S = get!(String);
 
     let mut T = 0;
     let mut A = 0;

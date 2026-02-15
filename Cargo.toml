@@ -1,0 +1,17 @@
+[package]
+name = "atcoder-wasm"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# cp-library-rs = { path = "../cp-library/cp-library-rs" }
+# num = "=0.4.3"
+# num-traits = "=0.2.19"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = "symbols"
+debug = 0

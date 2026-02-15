@@ -1,0 +1,14 @@
+{
+    "main": {
+		"prefix": "main",
+		"body": [
+			"#![allow(non_snake_case)]",
+			"",
+			"use std::io::{stdout, Write};",
+			"",
+			"fn main() {",
+			"\t$1",
+			"}",
+		]
+	},
+}

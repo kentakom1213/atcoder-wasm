@@ -5,7 +5,7 @@ use std::io::{Write, stdout};
 use atcoder_wasm::{data_structure::segment_tree::SegmentTree, get};
 
 fn main() {
-    let (N, Q) = get!(usize, usize);
+    let (_N, Q) = get!(usize, usize);
     let A = get!(usize;;);
 
     let mut seg = SegmentTree::build(&A, 0, |a, b| a + b);

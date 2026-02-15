@@ -5,7 +5,7 @@ use std::io::{Write, stdout};
 use atcoder_wasm::get;
 
 fn main() {
-    let N = get!(usize);
+    let _N = get!(usize);
     let S = get!(String);
     let T = get!(String);
 

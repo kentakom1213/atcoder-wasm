@@ -41,9 +41,9 @@ fn main() {
         let pos = smoke.partition_point(|v| (v.0, v.1) < (r, c));
 
         if pos < N && smoke[pos].0 == r && smoke[pos].1 == c && smoke[pos].2 <= t {
-            out.write(&[b'1']);
+            out.write(&[b'1']).ok();
         } else {
-            out.write(&[b'0']);
+            out.write(&[b'0']).ok();
         }
     }
 }

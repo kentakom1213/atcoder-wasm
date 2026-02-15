@@ -7,12 +7,21 @@ if [ $# -ne 1 ]; then
   exit 1
 fi
 
+export RUSTFLAGS="\
+  --remap-path-prefix $HOME=~ \
+  --remap-path-prefix $(pwd)=. \
+"
+
 BIN_NAME="$1"
 OUT_NAME="results/$BIN_NAME"
 TARGET="wasm32-wasip1"
 
 # build
-cargo build -r --bin "$BIN_NAME" --target "$TARGET"
+# cargo build -r --bin "$BIN_NAME" --target "$TARGET"
+cargo +nightly build \
+  -Z unstable-options \
+  -Z build-std=std \
+  -r --bin "$BIN_NAME" --target "$TARGET"
 
 # strip
 wasm-tools strip \
@@ -20,14 +29,12 @@ wasm-tools strip \
   -o "$OUT_NAME.wasm"
 
 # 最適化
-# wasm-opt で最適化 + strip 相当
 wasm-opt -Oz --enable-bulk-memory-opt \
   "target/$TARGET/release/$BIN_NAME.wasm" \
   -o "$OUT_NAME.wasm"
 
 # wat 出力
 wasm-tools print "$OUT_NAME.wasm" > "$OUT_NAME.wat"
-
 
 # サイズ取得（bytes）
 WAT_BYTES=$(wc -c < "$OUT_NAME.wat" | tr -d ' ')

@@ -13,7 +13,7 @@ rustflags = [
     "-C",
     "strip=symbols",
     "-C",
-    "link-arg=-s",
-    "-C",
     "link-arg=--strip-all",
+    "-C",
+    "panic=immediate-abort",
 ]

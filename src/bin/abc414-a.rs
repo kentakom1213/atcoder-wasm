@@ -1,10 +1,10 @@
 #![allow(non_snake_case)]
 
-use atcoder_wasm::get;
+use atcoder_wasm::input;
 
 fn main() {
-    let (N, L, R) = get!(usize, usize, usize);
-    let XY = get!(usize, usize; N);
+    let (N, L, R) = input!(usize, usize, usize);
+    let XY = input!(usize, usize; N);
 
     println!(
         "{}",

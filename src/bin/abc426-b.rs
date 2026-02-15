@@ -2,10 +2,10 @@
 
 use std::io::Write;
 
-use atcoder_wasm::get;
+use atcoder_wasm::input;
 
 fn main() {
-    let S = get!(String);
+    let S = input!(String);
 
     let mut cnt = [0; 26];
 

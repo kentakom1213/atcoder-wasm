@@ -1,19 +1,22 @@
 #![allow(non_snake_case)]
 
-use std::io::{Write, stdout};
+use std::io::{BufWriter, Write, stdout};
 
-use atcoder_wasm::{data_structure::segment_tree::SegmentTree, get};
+use atcoder_wasm::input;
+use cp_library_rs::{
+    algebraic_structure::operation::Add, data_structure::segment_tree::SegmentTree,
+};
 
 fn main() {
-    let (_N, Q) = get!(usize, usize);
-    let A = get!(usize;;);
+    let (_N, Q) = input!(usize, usize);
+    let A = input!(usize;;);
 
-    let mut seg = SegmentTree::build(&A, 0, |a, b| a + b);
+    let mut seg = SegmentTree::<Add<usize>>::from_vec(A);
 
-    let mut out = stdout();
+    let mut out = BufWriter::new(stdout().lock());
 
     for _ in 0..Q {
-        let q = get!(usize;;);
+        let q = input!(usize;;);
 
         if q[0] == 1 {
             let x = q[1];

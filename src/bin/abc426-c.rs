@@ -2,10 +2,10 @@
 
 use std::io::{Write, stdout};
 
-use atcoder_wasm::get;
+use atcoder_wasm::input;
 
 fn main() {
-    let (N, Q) = get!(usize, usize);
+    let (N, Q) = input!(usize, usize);
 
     let mut V = vec![1; N + 1];
     let mut versions: Vec<_> = (1..=N).rev().collect();
@@ -13,7 +13,7 @@ fn main() {
     let mut out = stdout();
 
     for _ in 0..Q {
-        let (x, y) = get!(usize, usize);
+        let (x, y) = input!(usize, usize);
         let mut updated = 0;
 
         while versions.last().is_some_and(|&v| v <= x) {

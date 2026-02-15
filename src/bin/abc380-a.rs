@@ -1,9 +1,9 @@
 #![allow(non_snake_case)]
 
-use atcoder_wasm::get;
+use atcoder_wasm::input;
 
 fn main() {
-    let N = get!(String);
+    let N = input!(String);
     let mut cnt = [0; 3];
 
     for c in N.chars() {

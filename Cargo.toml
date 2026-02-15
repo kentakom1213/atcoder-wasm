@@ -7,9 +7,8 @@ edition = "2024"
 
 [dependencies]
 cp-library-rs = { git = "https://github.com/kentakom1213/cp-library", branch = "feature/target-wasm" }
-# cp-library-rs = { path = "../cp-library/cp-library-rs" }
-# num = "=0.4.3"
-# num-traits = "=0.2.19"
+num = "=0.4.3"
+num-traits = "=0.2.19"
 
 [profile.release]
 opt-level = "z"

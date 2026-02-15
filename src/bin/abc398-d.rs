@@ -2,11 +2,11 @@
 
 use std::io::{Write, stdout};
 
-use atcoder_wasm::get;
+use atcoder_wasm::input;
 
 fn main() {
-    let (N, R, C) = get!(usize, i32, i32);
-    let S = get!(String);
+    let (N, R, C) = input!(usize, i32, i32);
+    let S = input!(String);
 
     let mut smoke = vec![];
 

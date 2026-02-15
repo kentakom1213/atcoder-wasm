@@ -1,10 +1,10 @@
 #![allow(non_snake_case)]
 
-use atcoder_wasm::get;
+use atcoder_wasm::input;
 
 fn main() {
-    let N = get!(usize);
-    let S = get!(String; N);
+    let N = input!(usize);
+    let S = input!(String; N);
 
     for s in S.iter().rev() {
         println!("{s}");

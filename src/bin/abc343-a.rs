@@ -2,10 +2,10 @@
 
 use std::io::{Write, stdout};
 
-use atcoder_wasm::get;
+use atcoder_wasm::input;
 
 fn main() {
-    let (A, B) = get!(usize, usize);
+    let (A, B) = input!(usize, usize);
 
     let mut out = stdout();
 

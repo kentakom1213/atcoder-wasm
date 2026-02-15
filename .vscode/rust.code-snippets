@@ -4,8 +4,6 @@
 		"body": [
 			"#![allow(non_snake_case)]",
 			"",
-			"use std::io::{BufWriter, stdout, Write};",
-			"",
 			"fn main() {",
 			"\t$1",
 			"}",

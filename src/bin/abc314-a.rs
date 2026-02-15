@@ -1,6 +1,6 @@
 #![allow(non_snake_case)]
 
-use atcoder_wasm::get;
+use atcoder_wasm::input;
 
 const PI: &[u8] = &[
     1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9, 3, 2, 3, 8, 4, 6, 2, 6, 4, 3, 3, 8, 3, 2, 7, 9, 5, 0,
@@ -10,7 +10,7 @@ const PI: &[u8] = &[
 ];
 
 fn main() {
-    let N = get!(usize);
+    let N = input!(usize);
 
     print!("3.");
 

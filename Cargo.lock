@@ -7,6 +7,7 @@ name = "atcoder-wasm"
 version = "0.1.0"
 dependencies = [
  "cp-library-rs",
+ "itertools 0.11.0",
  "num",
  "num-traits",
  "proconio",
@@ -29,7 +30,7 @@ name = "cp-library-rs"
 version = "0.3.19"
 source = "git+https://github.com/kentakom1213/cp-library?branch=feature%2Ftarget-wasm#d0b0d567f3a425fad7b31bedfc5c25f181ac7928"
 dependencies = [
- "itertools",
+ "itertools 0.14.0",
  "itertools-num",
  "num",
  "num-bigint",
@@ -61,6 +62,15 @@ dependencies = [
  "libc",
  "r-efi",
  "wasip2",
+]
+
+[[package]]
+name = "itertools"
+version = "0.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b1c173a5686ce8bfa551b3563d0c2170bf24ca44da99c7ca4bfdab5418c3fe57"
+dependencies = [
+ "either",
 ]
 
 [[package]]

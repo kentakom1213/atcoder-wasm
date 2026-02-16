@@ -43,11 +43,3 @@ nix run .#build -- abc301-a
 ビルド後の成果物:
 - `results/<bin-name>.wasm`
 - `results/<bin-name>.wat`
-
-### 4. `build.sh` を使う場合
-
-`build.sh` は互換ラッパーで、中で `nix run .#build` を呼びます。
-
-```sh
-./build.sh <bin-name>
-```

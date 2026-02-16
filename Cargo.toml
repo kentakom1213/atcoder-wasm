@@ -10,6 +10,7 @@ cp-library-rs = { git = "https://github.com/kentakom1213/cp-library", branch = "
 num = "=0.4.3"
 num-traits = "=0.2.19"
 proconio = "0.5.0"
+itertools = "0.11.0"
 
 [profile.release]
 opt-level = "z"

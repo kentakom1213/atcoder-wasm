@@ -28,7 +28,7 @@ checksum = "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801"
 [[package]]
 name = "cp-library-rs"
 version = "0.3.19"
-source = "git+https://github.com/kentakom1213/cp-library?branch=feature%2Ftarget-wasm#d0b0d567f3a425fad7b31bedfc5c25f181ac7928"
+source = "git+https://github.com/kentakom1213/cp-library?branch=feature%2Ftarget-wasm#60739f715b2adeb16a399bdd5d93bf057472c87d"
 dependencies = [
  "itertools 0.14.0",
  "itertools-num",
@@ -272,9 +272,9 @@ checksum = "ab16ced94dbd8a46c82fd81e3ed9a8727dac2977ea869d217bcc4ea1f122e81f"
 
 [[package]]
 name = "syn"
-version = "2.0.115"
+version = "2.0.116"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6e614ed320ac28113fa64972c4262d5dbc89deacdfd00c34a3e4cea073243c12"
+checksum = "3df424c70518695237746f84cede799c9c58fcb37450d7b23716568cc8bc69cb"
 dependencies = [
  "proc-macro2",
  "quote",
